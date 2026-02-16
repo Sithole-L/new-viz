@@ -16,10 +16,15 @@ def generate_chart():
     celebrities.append("You")
     celebrity_heights.append(user_height)
 
+    # sort by height
+    paired = list(zip(celebrity_heights, celebrities))
+    paired.sort(key=lambda x: x[0])
+    celebrity_heights_sorted, celebrities_sorted = zip(*paired)
+
     plt.figure(figsize=(8, 6))
 
     # use the custom_colors list for the bar colours
-    ax = sns.barplot(y=celebrity_heights, x=celebrities, palette=custom_colors, hue=celebrities)
+    ax = sns.barplot(y=list(celebrity_heights_sorted), x=list(celebrities_sorted) , palette=custom_colors, hue=celebrities_sorted)
     ax.set(ylabel = 'Height (cm)', xlabel = 'Celebrities')
     plt.title('Height Comparison With celebrities')
     # rotate a-axis labels for better visibility
