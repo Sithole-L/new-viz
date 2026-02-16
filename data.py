@@ -9,4 +9,4 @@ famous_peeps_heights = {
     "Napoleon": 168,
 }
 
-custom_colors = ["#FF5733", "#33FF57", "#337AFF", "#FF33E0", "#8A2BE2", "#FFD700"]
+custom_colors = ["#FF5733", "#33FF57", "#337AFF", "#FF33E0", "#8A2BE2", "#FFD700", "#FFE8A3"]
